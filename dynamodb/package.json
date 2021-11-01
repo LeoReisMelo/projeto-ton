@@ -1,0 +1,13 @@
+{
+    "name": "backend-dynamodb",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": "Leonardo Reis",
+    "scripts": {
+        "start": "serverless dynamodb start"
+    },
+    "devDependencies": {
+        "serverless-dynamodb-local": "^0.2.40",
+        "serverless-offline": "^8.2.0"
+    }
+}

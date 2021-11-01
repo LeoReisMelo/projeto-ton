@@ -1,0 +1,205 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 201326592 bytes for Failed to commit area from 0x0000000741e00000 to 0x000000074de00000 of length 201326592.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3301), pid=13436, tid=13076
+#
+# JRE version:  (13.0.2+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djava.library.path=C:\Users\leona\햞ea de Trabalho\Projeto Ton\dynamodb\.dynamodb/DynamoDBLocal_lib DynamoDBLocal.jar -port 8000 -inMemory -sharedDb
+
+Host: Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz, 8 cores, 11G,  Windows 10 , 64 bit Build 22000 (10.0.22000.282)
+Time: Fri Oct 29 22:08:05 2021 Hora oficial do Brasil elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000012dacb80800):  JavaThread "Unknown thread" [_thread_in_vm, id=13076, stack(0x0000001ac8c00000,0x0000001ac8d00000)]
+
+Stack: [0x0000001ac8c00000,0x0000001ac8d00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x624f9a]
+V  [jvm.dll+0x770cfa]
+V  [jvm.dll+0x7724af]
+V  [jvm.dll+0x772ab3]
+V  [jvm.dll+0x24bf08]
+V  [jvm.dll+0x6222aa]
+V  [jvm.dll+0x6170b5]
+V  [jvm.dll+0x30a88c]
+V  [jvm.dll+0x30a6c2]
+V  [jvm.dll+0x30fe36]
+V  [jvm.dll+0x353f46]
+V  [jvm.dll+0x353720]
+V  [jvm.dll+0x2e550a]
+V  [jvm.dll+0x2e67a2]
+V  [jvm.dll+0x74dd78]
+V  [jvm.dll+0x361989]
+V  [jvm.dll+0x730e65]
+V  [jvm.dll+0x3cc53f]
+V  [jvm.dll+0x3ce861]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x26c0c]
+C  [KERNEL32.DLL+0x154e0]
+C  [ntdll.dll+0x485b]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffc6207ccb8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000012dacbd6000 GCTaskThread "GC Thread#0" [stack: 0x0000001ac8d00000,0x0000001ac8e00000] [id=328]
+  0x0000012dacbf2000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001ac8e00000,0x0000001ac8f00000] [id=8540]
+  0x0000012dacbf3800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001ac8f00000,0x0000001ac9000000] [id=9388]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc618b51d7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000012dacb7b420] Heap_lock - owner thread: 0x0000012dacb80800
+
+Heap address: 0x0000000741e00000, size: 3042 MB, Compressed Oops mode: Non-zero based: 0x0000000741e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (8 events):
+Event: 0.524 Loaded shared library C:\Program Files\Java\jdk-13.0.2\bin\zip.dll
+Event: 0.546 Loaded shared library C:\Program Files\Java\jdk-13.0.2\bin\jimage.dll
+Event: 0.715 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjava.base-coop.dll failed, error code 126
+Event: 0.715 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjava.logging-coop.dll failed, error code 126
+Event: 0.715 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.compiler-coop.dll failed, error code 126
+Event: 0.715 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.scripting.nashorn-coop.dll failed, error code 126
+Event: 0.715 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.internal.vm.ci-coop.dll failed, error code 126
+Event: 0.715 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.internal.vm.compiler-coop.dll failed, error code 126
+
+
+Dynamic libraries:
+0x00007ff774590000 - 0x00007ff77459f000 	C:\Program Files\Java\jdk-13.0.2\bin\java.exe
+0x00007ffcb1580000 - 0x00007ffcb1787000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffcafba0000 - 0x00007ffcafc5d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffcaebc0000 - 0x00007ffcaef34000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffcaeff0000 - 0x00007ffcaf101000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc9da10000 - 0x00007ffc9da25000 	C:\Program Files\Java\jdk-13.0.2\bin\VCRUNTIME140.dll
+0x00007ffc98f00000 - 0x00007ffc98f18000 	C:\Program Files\Java\jdk-13.0.2\bin\jli.dll
+0x00007ffcb0290000 - 0x00007ffcb033c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffcaf410000 - 0x00007ffcaf4b3000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffcb0340000 - 0x00007ffcb03dd000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffcafc60000 - 0x00007ffcafd81000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffcb06e0000 - 0x00007ffcb088c000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffcaefc0000 - 0x00007ffcaefe6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffcafa80000 - 0x00007ffcafaa9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffcaf2f0000 - 0x00007ffcaf402000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffcaea60000 - 0x00007ffcaeafd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc962d0000 - 0x00007ffc96575000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ffca5f70000 - 0x00007ffca5f7a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffcafa40000 - 0x00007ffcafa71000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc97e30000 - 0x00007ffc97ecb000 	C:\Program Files\Java\jdk-13.0.2\bin\msvcp140.dll
+0x00007ffc615c0000 - 0x00007ffc6211d000 	C:\Program Files\Java\jdk-13.0.2\bin\server\jvm.dll
+0x00007ffcb0910000 - 0x00007ffcb0918000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffca4920000 - 0x00007ffca4953000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc9ce50000 - 0x00007ffc9ce59000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffcafed0000 - 0x00007ffcaff3f000 	C:\WINDOWS\System32\ws2_32.DLL
+0x00007ffcadb40000 - 0x00007ffcadb58000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc9da00000 - 0x00007ffc9da10000 	C:\Program Files\Java\jdk-13.0.2\bin\verify.dll
+0x00007ffcac740000 - 0x00007ffcac961000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffc99d50000 - 0x00007ffc99d81000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffcaef40000 - 0x00007ffcaefc0000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc98dc0000 - 0x00007ffc98de6000 	C:\Program Files\Java\jdk-13.0.2\bin\java.dll
+0x00007ffc98da0000 - 0x00007ffc98db7000 	C:\Program Files\Java\jdk-13.0.2\bin\zip.dll
+0x00007ffc9d6d0000 - 0x00007ffc9d6da000 	C:\Program Files\Java\jdk-13.0.2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-13.0.2\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467;C:\Program Files\Java\jdk-13.0.2\bin\server
+
+VM Arguments:
+jvm_args: -Djava.library.path=C:\Users\leona\햞ea de Trabalho\Projeto Ton\dynamodb\.dynamodb/DynamoDBLocal_lib 
+java_command: DynamoDBLocal.jar -port 8000 -inMemory -sharedDb
+java_class_path (initial): DynamoDBLocal.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 201326592                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3189768192                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 3189768192                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-13.0.2
+PATH=C:\Users\leona\AppData\Local\Temp\yarn--1635555852877-0.794411428645678;C:\Users\leona\햞ea de Trabalho\Projeto Ton\dynamodb\node_modules\.bin;C:\Users\leona\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\leona\햞ea de Trabalho\max\JAVACC_PROGRAM\scripts;C:\Program Files\Git\cmd;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\leona\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\leona\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\leona\AppData\Local\Programs\Python\Python39\;C:\Users\leona\AppData\Local\Microsoft\WindowsApps;C:\Users\leona\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\leona\AppData\Local\Yarn\bin;C:\Program Files\Java\jdk-13.0.2\bin;C:\jflex-1.8.2\bin;C:\Users\leona\AppData\Roaming\npm;C:\Users\leona\.dotnet\tools;C:\Users\leona\AppData\Roaming\nvm;C:\Program Files\nodejs
+USERNAME=Leonardo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 22000 (10.0.22000.282)
+HyperV virtualization detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 12, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 12164M (357M free)
+TotalPageFile size 12164M (AvailPageFile size 85M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 252M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8) for windows-amd64 JRE (13.0.2+8), built on Dec 11 2019 09:20:33 by "mach5one" with unknown MS VC++:1916
+
+END.

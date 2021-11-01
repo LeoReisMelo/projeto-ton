@@ -1,0 +1,57 @@
+service: backend
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: sa-east-1
+  lambdaHashingVersion: 20201221
+package:
+  individually: true
+
+functions:
+  create-user:
+    handler: src/user/functions/create-user.handler
+    events:
+      - http:
+          path: ton/createUser
+          method: post
+          cors: true
+  get-users:
+    handler: src/user/functions/get-users.handler
+    events:
+      - http:
+          path: ton/listUsers
+          method: get
+          cors: true
+  get-user:
+    handler: src/user/functions/get-user.handler
+    events:
+      - http:
+          path: ton/listUser
+          method: get
+          cors: true
+  get-all-hits:
+    handler: src/access/functions/get-all-hits.handler
+    events:
+      - http:
+          path: ton/getAllHits
+          method: get
+          cors: true
+  increase-hits:
+    handler: src/access/functions/increase-hits.handler
+    events:
+      - http:
+          path: ton/increaseHits
+          method: post
+          cors: true
+  create-key:
+    handler: src/access/functions/create-key.handler
+    events:
+      - http:
+          path: ton/createKey
+          method: post
+          cors: true
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
